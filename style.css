@@ -32,6 +32,10 @@ body {
     gap: 1rem;
 }
 
+.result-img {
+    display: none;
+}
+
 button{
     padding: 10px;
     font-size: 3rem;
@@ -57,4 +61,16 @@ button:hover {
 
 p {
     font-weight: 700;
+}
+
+.result-playr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.value, .x-um{
+    font-size: 2rem;
+    font-weight: 400;
 }
