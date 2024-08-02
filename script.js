@@ -25,10 +25,13 @@ const playMachine = () => {
 
 const playResult =(human, machine) => {
     console.log('Humano: ' + human +  ' Maquina: ' + machine)
+    const imgResult = document.getElementById('img-result')
 
     //Verificações
     if(human === machine){
-        result.innerHTML = 'Empate!'
+        // result.innerHTML = 'Empate!'
+        imgResult.src = 'assets/img/empate.png'
+        imgResult.style.display = 'block';
     } else if( 
         (human === 'paper' && machine === 'rock') || 
         (human === 'rock' &&  machine === 'scissors') || 
@@ -36,11 +39,13 @@ const playResult =(human, machine) => {
     ){
         humanScoreNumber++
         humanScore.innerHTML = humanScoreNumber
-        result.innerHTML = 'Você ganhou!!'
+        imgResult.src = 'assets/img/gif-human.gif'
+        imgResult.style.display = 'block';
     }else {
         machineScoreNumber++
         machineScore.innerHTML = machineScoreNumber
-        result.innerHTML = 'MáqPô ganhou!'
+        imgResult.src = 'assets/img/gif-robot...gif'
+        imgResult.style.display = 'block';
     }
 }
 
